@@ -1,0 +1,160 @@
+body
+{
+    background-color: #ffffff;
+    font-family: "calibri"
+}
+header
+{
+    background-color: #1976D2;
+    width: 100%;
+    content: "";
+    display: table;
+}
+nav
+{
+    float: right;
+    padding: 20px;
+}
+nav div a
+{
+    position: absolute;
+    left: 0;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: "calibri";
+    font-size: 30px;
+    top: 10px;
+    margin-left: 10px;
+    transition: all 0.5s;
+}
+nav div a:hover
+{
+    color: #000000;
+}
+nav ul li
+{
+    list-style: none;
+    float: right;
+    margin-left: 25px;
+    
+}
+nav ul li a
+{
+    text-decoration: none;
+    color: #000000;
+    font-size: 20px;
+    font-weight: bold;
+    transition: all 0.5s;
+}
+nav ul li a:hover
+{
+    color: #FFFFFF;
+}
+
+.img-logo
+{
+    float: left;
+    height: 100%;
+
+}
+
+.boton-login
+{
+    background-color: #0d6efd;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 16px;
+    margin: auto;
+    margin-top: 20px;
+    cursor: pointer;
+    box-shadow: #0d6efd 0px 0px 10px;
+}
+
+.login
+{
+    position: relative;
+    background-color: #ced4da;
+    color: #000000;
+    width: 360px;
+    margin: 10% auto;
+    text-align: center;
+    vertical-align: middle;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: #ced4da 0px 0px 10px;
+}
+.game
+{
+    position: relative;
+    background-color: #ced4da;
+    color: #000000;
+    width: 360px;
+    margin: 10% auto;
+    text-align: center;
+    vertical-align: middle;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: #ced4da 0px 0px 10px;
+}
+
+.verde
+{
+    width: 40px;
+    height: 40px;
+    margin: 10px;
+    background: green;
+    color: #000000;
+    border-radius: 10px;
+    box-shadow: green 0px 0px 10px;
+    text-align: center;
+}
+.amarillo
+{
+    width: 40px;
+    height: 40px;
+    margin: 10px;
+    background: orange;
+    color: #000000;
+    border-radius: 10px;
+    box-shadow: orange 0px 0px 10px;
+    text-align: center;
+}
+.rojo
+{
+    width: 40px;
+    height: 40px;
+    margin: 10px;
+    background: red;
+    color: #000000;
+    border-radius: 10px;
+    box-shadow: red 0px 0px 10px;
+    text-align: center;
+}
+.vista
+{
+    flex:auto;
+}
+.box-input
+{
+    background: #FFFFFF;
+    border: #000000;
+    border-radius: 10px;
+    box-shadow: #FFFFFF 0px 0px 10px;
+    text-align: center;
+    color: #000000;
+    width: 40px;
+    height: 40px;
+    margin: 10px;
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+input[type=number] { -moz-appearance:textfield; }

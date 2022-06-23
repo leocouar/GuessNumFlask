@@ -1,0 +1,11 @@
+{% extends 'layout.html' %}
+{% block header %}
+    <h1>{% block title %} Guess the number {% endblock %}</h1>
+{% endblock %}
+{% block content %}
+    <div class="game">
+        <h1>Bienvenido a <br> Guess the number</h1>
+        <a href="{{ url_for('game.guia') }}"><button type="submit" class="boton-login" value="Iniciar partida">iniciar partida</button></a>
+        <a href="{{ url_for('game.ranking') }}"></a><button class="boton-login" value="Ranking">Ranking</button></a>
+    </div>
+{% endblock %}

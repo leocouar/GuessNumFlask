@@ -1,0 +1,60 @@
+{% extends 'layout.html' %}
+
+    
+    {% block header %}
+        <h2>{% block title %} Play {% endblock %}</h2>
+    {% endblock %}
+
+    {% block content %}
+        {% if g.user %}
+        <div class="d-flex flex-row">
+            <div class="game">
+                <div>
+                    <div class="d-flex flex-row mx-3">
+                        {%for i in rdnum %}
+                            <h1>/{{i}}</h1>
+                            <br>
+                        {% endfor %}
+                    </div>
+                    <form action="{{ url_for('game.play') }}" method="POST">
+                        <h1>ingrese los numeros</h1>
+                        <br>
+                        <input id="valor1" name="valor1" type="number" class="box-input" required max="60" min="1"></input>
+                        <input id="valor2" name="valor2" type="number" class="box-input" required max="60" min="1"></input>
+                        <input id="valor3" name="valor3" type="number" class="box-input" required max="60" min="1"></input>
+                        <input id="valor4" name="valor4" type="number" class="box-input" required max="60" min="1"></input>
+                        <input id="valor5" name="valor5" type="number" class="box-input" required max="60" min="1" ></input>
+                        <br>
+                        <h1>{{ message }}</h1>
+                        
+                        <button type="submit" class="boton-login">Probar </button>
+                    </form>
+                </div>
+            </div>
+            <div class="game">
+                <h2>Numero de intentos: {{numIntentos}}</h2>
+                {% for x in intentosList %}
+                    <div class="vista d-flex flex-row" >
+                        {% for z in x %}
+                                {% if z in rdnum %}
+                                    {% if x.index(z) == rdnum.index(z) %}
+                                        <div class="verde">{{z}}</div>
+                                    {% else %}
+                                        <div class="amarillo">{{z}}</div>
+                                    {% endif %}
+                                {% else %}
+                                    <div class="rojo">{{z}}</div>
+                                {% endif %}
+                        {% endfor %}
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+        
+        {% else %}
+        <div class="game">
+            <h1>Necesitas iniciar secion para poder jugar</h1>
+            <a href="{{ url_for('user.login') }}"><button type="submit" class="boton-login" value="Iniciar sesion">iniciar sesion</button></a>
+        </div>
+        {% endif %}
+    {% endblock %}

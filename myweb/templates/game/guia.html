@@ -1,0 +1,21 @@
+{% extends 'layout.html' %}
+
+    {% block header %}
+        <h2>{% block title %} Play {% endblock %}</h2>
+    {% endblock %}
+
+    {% block content %}
+        {% if g.user %}
+        <div class="game">
+            <h1>Guia</h1>
+            <form method="post">
+                <button type="submit" class="boton-login">Empezar</button>
+            </form>
+        </div>
+        {% else %}
+        <div class="game">
+            <h1>Necesitas iniciar secion para poder jugar</h1>
+            <button type="submit" class="boton-login" value="Iniciar sesion">iniciar sesion</button></a>
+        </div>
+        {% endif %}
+    {% endblock %}

@@ -1,0 +1,19 @@
+{% extends 'layout.html' %}
+
+    
+    {% block header %}
+        <h2>{% block title %} Play {% endblock %}</h2>
+    {% endblock %}
+
+    {% block content %}
+        {% if g.user %}
+        <div class="game">
+            <div>Ganaste</div>
+        </div>
+        {% else %}
+        <div class="game">
+            <h1>Necesitas iniciar secion para poder jugar</h1>
+            <a href="{{ url_for('user.login') }}"><button type="submit" class="boton-login" value="Iniciar sesion">iniciar sesion</button></a>
+        </div>
+        {% endif %}
+    {% endblock %}
